@@ -11,14 +11,14 @@ export default class extends AbstractView{
         const div = document.createElement("div");
         const cont = document.getElementById("container")
         const box =document.createElement("div")
-        cont.appendChild(box);
+        // cont.appendChild(box);
         box.innerHTML =`<h1> atsu </h1>`
         div.innerHTML = `
         <p id ="ptag">This is content</p>
         `
         return `
         <div id= "container"> 
-
+            ${box.innerHTML}
         </div>
         `
     }
