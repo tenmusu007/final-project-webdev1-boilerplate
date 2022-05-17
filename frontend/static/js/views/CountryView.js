@@ -12,7 +12,6 @@ const getName = function(country) {
   };
   //  console.log(getName("arg"));
 
-
 export default class extends AbstractView{
     constructor(params) {
         super(params);
@@ -25,7 +24,6 @@ export default class extends AbstractView{
         let countryName = ""
         countryName= getName(countryId);
         
-        //GET MORE DETAILS
         let countryNativeName= ""
         let countryCapital= ""
         let countryFlag = ""
@@ -64,14 +62,14 @@ export default class extends AbstractView{
 
             domain = countries[i].tld.toString();
             countryDomain= domain;
-                  
+            
             
             countryPopulation = countries[i].population;
             countryRegion = countries[i].region;
             countrySubregion = countries[i].subregion;
 
             currencies = countries[i].currencies;
-            console.log(currencies);
+            //console.log(currencies);
             for (const property in currencies) {
                //  console.log(`${property}: ${currencies[property]}`);
                if (countryCurrencies !== "")
@@ -82,7 +80,7 @@ export default class extends AbstractView{
                }
                 
             languages= countries[i].languages;
-            console.log(languages);
+            //console.log(languages);
             for (const property in languages) {
              //console.log(`${property}: ${languages[property]}`);
              if (countryLanguages !== "")
@@ -95,15 +93,20 @@ export default class extends AbstractView{
             
             
             borders = countries[i].borders 
-            console.log(borders);
+            //console.log(borders);
+            if(borders){
             for (let b = 0; b < borders.length; b++){
-                countryBorders += "<img><a href= http://localhost:3000/countries/"+borders[b].toLowerCase()+">"+ getName(borders[b].toLowerCase()) + "</a></img>  ";
-            }
+                countryBorders += `<img class="btnImage"><a href= "http://localhost:3000/countries/${borders[b].toLowerCase()}">${getName(borders[b].toLowerCase())}</a></img>  `;
+             }
               //console.log(countryName);
              //console.log(countryFlag);
             }
+            else{
+                countryBorders = "None";
+            }
         }
-    
+        }
+
         return `
             <div>
                 <div>
@@ -131,7 +134,7 @@ export default class extends AbstractView{
                             </div>
                         </div> 
                         <div class="row">
-                            <label>Borders Countries: </label> ${countryBorders}
+                            <label>Border Countries: </label> ${countryBorders}
                         </div>
                         <div class="row">
                          <!--    <iframe src="${map}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!-->
