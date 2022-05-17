@@ -15,7 +15,7 @@ textarea:focus, input:focus{
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none!important;
     transition: all 0.5s ease;
     color: white;
 }
