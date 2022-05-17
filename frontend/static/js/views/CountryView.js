@@ -110,7 +110,7 @@ export default class extends AbstractView{
         return `
             <div class="main">
                 <div class="top">
-                    <a  class="btn" href= http://localhost:3000/countries >Back</a>
+                    <a  class="btn" href= http://localhost:3000/countries > <i class="fa-solid fa-arrow-left-long"></i>Back</a>
                 </div>
                 <div class="myrow">
                     <div class="mycolumn"><img src=${countryFlag}></img></div>
