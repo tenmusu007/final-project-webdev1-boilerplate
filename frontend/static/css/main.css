@@ -1,0 +1,92 @@
+@import url(https://fonts.google.com/specimen/Nunito+Sans);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.5s ease;
+  color: white;
+}
+
+:hover {
+  transition: all 0.5s ease;
+}
+
+body {
+  display: flex;
+}
+
+h2 {
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+label {
+  padding: 10px 10px 10px 10px;
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.top {
+  display: flex;
+  justify-content: left;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid rgb(153, 155, 153);
+}
+
+a.btn:link, a.btn:visited {
+  padding: 2px 2px 2px 2px;
+  width: 30px;
+  text-decoration: none;
+  font-size: 10pt;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border: 1px solid rgb(153, 155, 153);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+a.btn:hover {
+  background-color: #65b0e2;
+  border: 1px solid rgb(153, 155, 153);
+}
+
+.myrow {
+  display: flex;
+  margin-bottom: 1em;
+  border: 1px solid rgb(153, 155, 153);
+  flex-direction: row;
+}
+
+.mycolumn {
+  display: inline-block;
+  margin-left: 2em;
+  flex-direction: column;
+  justify-content: left;
+  border: 1px solid rgb(153, 155, 153);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 1em;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    transition: all 0.5s ease;
+    color: white;
+}
+
+:hover{
+    transition: all 0.5s ease;
+}
+
+//IMPORT FONT
+@import url(https://fonts.google.com/specimen/Nunito+Sans);
+
+//PAGES
+@import "index";
+@import "countries";
+@import "countries-view"
