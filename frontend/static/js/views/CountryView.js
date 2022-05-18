@@ -4,13 +4,14 @@ import { countries } from "../index.js";
 const getName = function(country) {
     let name = "";
     for (let i = 0 ; i <  countries.length ; i++) {
-        if (countries[i].cca3.toLowerCase() ===  country ){
-            name= countries[i].name.common;
+        if (countries[i].cca3.toLowerCase() ===  country.toLowerCase() ){
+            name= countries[i].name.common;            
         } 
     }
+    // console.log(countries)
     return name;
   };
-  //  console.log(getName("arg"));
+  // console.log(getName("arg"));
 
 
 export default class extends AbstractView{
@@ -44,7 +45,7 @@ export default class extends AbstractView{
         let nativeName = {}
 
         for(let i = 0; i< countries.length; i++){
-          if (countries[i].cca3.toLowerCase() ===  countryId ){
+          if (countries[i].cca3.toLowerCase() ===  countryId.toLowerCase() ){
             countryFlag= countries[i].flags.png;
 
             nativeName= countries[i].name;
@@ -58,7 +59,7 @@ export default class extends AbstractView{
             countryCapital= countries[i].capital;
             map = countries[i].maps.googleMaps;
             //map= "http://www.google.com/maps/place/"+ countryName
-            //console.log(map);
+            console.log(map);
             
 
             domain = countries[i].tld.toString();
@@ -97,51 +98,56 @@ export default class extends AbstractView{
             //console.log(borders);
             if(borders){
             for (let b = 0; b < borders.length; b++){
-                countryBorders += `<a class="btn" href= "http://localhost:3000/countries/${borders[b].toLowerCase()}" >${getName(borders[b].toLowerCase())}</a> `;
+                countryBorders += `<a class="btn" href= "/countries/${borders[b].toLowerCase()}" >${getName(borders[b].toLowerCase())}</a> `;
              }
               //console.log(countryName);
-             //console.log(countryFlag);
+              //console.log(countryFlag);
             }
             else{
                 countryBorders = "None";
             }
         }
         }
+        
         return `
             <div class="main">
                 <div class="top">
-                    <a  class="btn" href= http://localhost:3000/countries > <i class="fa-solid fa-arrow-left-long"></i>Back</a>
+                    <a  class="btn back" href= "/countries"><i class="fas fa-long-arrow-alt-left"></i>  Back</a>
                 </div>
                 <div class="myrow">
-                    <div class="mycolumn"><img src=${countryFlag}></img></div>
-                    <div class="mycolumn">
-                        <div class="myrow"><h2>${countryName}</h2><div>
+                    <div class="mycolumn tamFlag">
+                        <img class="imgFlag" src=${countryFlag}></img>
+                    </div>
+                    <div class="mycolumn tamCountry">
+                        <h2 class="titleCountry">${countryName}</h2>
                         <div class="myrow">
                                 <div class="mycolumn">
-                                    <label><b>Native Name: </b></label>${countryNativeName}<br>
-                                    <label><b>Population: </b></label>${countryPopulation}<br>
-                                    <label><b>Region: </b></label>${countryRegion}<br>
-                                    <label><b>Sub Region: </b></label>${countrySubregion}<br>
-                                    <label><b>Capital: </b></label>${countryCapital}<br>
+                                  <ul>
+                                    <li><label>Native Name:</label>${countryNativeName}</li>
+                                    <li><label>Population:</label>${countryPopulation}</li>
+                                    <li><label>Region: </label>${countryRegion}</li>
+                                    <li><label>Sub Region: </label>${countrySubregion}</li>
+                                    <li><label>Capital: </label>${countryCapital}</li>
+                                   </ul>
                                 </div>
                                 <div class="mycolumn">
-                                    <label><b>Top Level Domain: </b></label>${countryDomain}<br>
-                                    <label><b>Currencies: </b></label>${countryCurrencies}<br>
-                                    <label><b>Languages: </b></label>${countryLanguages}<br>
-                                    <label><b>Routes: </b></label><a href=${map}>Google Maps</a>
+                                  <ul>
+                                    <li><label>Top Level Domain: </label>${countryDomain}</li>
+                                    <li><label>Currencies: </label>${countryCurrencies}</li>
+                                    <li><label>Languages: </label>${countryLanguages}</li>
+                                    <li><label>Routes: </label><a href=${map}>Google Maps</a></li>
+                                  </ul>
                                 </div>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="myrow">
-                            <label><b>Border Countries:</b> </label> ${countryBorders}
-                    </div>
-                    <div class="myrow">
-                         <!--    <iframe src="${map}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!-->
-                    </div>
+                        </div>
+                        <div class="myrow">
+                         <label>Border Countries:</label><span>${countryBorders}</span>
+                        </div>                
+                    </div> 
+                </div>
+                <div class="myrow"> 
+                   <!-- <iframe src="${map}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!-->
+                </div>
             </div>`;
-   
    }
 }
-
 
