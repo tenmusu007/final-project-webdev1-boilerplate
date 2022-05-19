@@ -53,6 +53,42 @@ function test(searchbox){
 }))
 console.log(info)
 
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+
+    console.log(countries);
+
+    const bodyEl = document.querySelector('body')
+    const boxEl = document.querySelector('.boxContent')
+
+    bodyEl.onscroll = logScroll
+    setTimeout(logScroll, 0)
+
+    function logScroll() {
+        if (window.scrollY > boxEl.offsetTop) {
+            document.querySelector('nav').style.backgroundColor = 'rgba(0, 0, 0, 0.8)'
+        } else {
+            document.querySelector('nav').style.backgroundColor = 'transparent'
+        }
+    }
+
+    const darkmodeBtn = document.querySelector(".btnDarkMod");
+
+    darkmodeBtn.addEventListener("click", function(){
+        const background = document.querySelector("body")
+    
+        if (background.style.backgroundColor === "white"){
+            background.style.backgroundColor = "black"
+            background.style.color = "white"
+        }else{
+            background.style.backgroundColor = "white"
+            background.style.color = "black"
+        }
+    });
+});
+
+
+
 export const loop = (data)=>{
     let array1 = []
         for(let i = 0; i < data.length; i++){
@@ -77,28 +113,4 @@ export const loop = (data)=>{
 }
         
 
-// let array2 =[]
-// function showUpHtml(test){
-//     // console.log("showUpHtml is working")
-//     console.log(test)
-//     for(let i = 0; i < test.length; i++){
-//         array2.push(
-//         `
-//         <div class="cont-indiv">
-//         <a href="http://localhost:3000/countries/${test[i].view}">
-//         <div class="box">
-//         <img src="${test[i].img}" alt="" class="flag">
-//         <p class="name">${test[i].cname}</p>
-//         <p class="num-pop"><span class="bold">population:</span> ${test[i].pop}</p>
-//         <p class="region"><span class="bold">region:</span> ${test[i].region}</p>
-//         <p class="capital"><span class="bold">capital:</span> ${test[i].capital}</p>
-//         </div>
-//         </a>
-//         </div>
-//         `
-//         )
-//         }
-//         // console.log(array2)
-//     return array2.join('')
-// }
-// // showUpHtml(info)
+
