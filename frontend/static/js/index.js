@@ -2,59 +2,30 @@ import {getCountries} from './countries.js'
 
 export const countries = getCountries();
 let searchbox 
+let url ="http://localhost:3000/countries"
 window.addEventListener('DOMContentLoaded', (e) =>{
-    const search = document.getElementById("search")
-    const countriesContainer = document.getElementsByClassName("conatiner-country")[0];
-    search.addEventListener("keyup", function(e){
-        if(e.key === "Enter"){
-            searchbox = e.target.value
-            const searchArray = test(searchbox);
-            console.log(searchArray)
-            countriesContainer.innerHTML = loop(searchArray);
-        };
-    })
-    const region = document.getElementById("region")
-    console.log(region) 
-    region.addEventListener("change", (event) => {
-    let selectedregion = (event.target.value)
-    console.log(selectedregion)
-    const regionArray =regionFn(selectedregion);
-    countriesContainer.innerHTML = loop(regionArray)
-});
-})
-function regionFn(data){
-    let arr = [];
-    for(let i = 0; i < info.length; i++){
-        if(info[i].region.indexOf(data) != -1){
-            arr.push(info[i])
-        }
-    }
-    return arr;
-}
-function test(searchbox){
-    let arr = [];
-    for(let i = 0; i < info.length; i++){
-        if(info[i].cname.toLowerCase().indexOf(searchbox.toLowerCase()) != -1){
-            console.log("yes")
-            arr.push(info[i])
-            // console.log(searchArray)
-        }
-    }
-    return arr;
-}
-    console.log(countries);
-    export const info = countries.map(item =>({
-    cname :item.name.common,
-    pop: item.population,
-    region: item.region,
-    capital: item.capital,
-    img : item.flags.png,
-    view : item.cca3
-}))
-console.log(info)
-
-window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+    if(location.href === url){
+        const search = document.getElementById("search")
+        const countriesContainer = document.getElementsByClassName("conatiner-country")[0];
+        search.addEventListener("keyup", function(e){
+            if(e.key === "Enter"){
+                searchbox = e.target.value
+                const searchArray = test(searchbox);
+                console.log(searchArray)
+                countriesContainer.innerHTML = loop(searchArray);
+            };
+        })
+        const region = document.getElementById("region")
+        console.log(region) 
+        region.addEventListener("change", (event) => {
+        let selectedregion = (event.target.value)
+        console.log(selectedregion)
+        const regionArray =regionFn(selectedregion);
+        countriesContainer.innerHTML = loop(regionArray)
+    });
+    console.log("country")
+    }else{
+        console.log('DOM fully loaded and parsed');
 
     console.log(countries);
 
@@ -85,7 +56,43 @@ window.addEventListener('DOMContentLoaded', (event) => {
             background.style.color = "black"
         }
     });
-});
+    }
+    console.log("home")
+})
+function regionFn(data){
+    let arr = [];
+    for(let i = 0; i < info.length; i++){
+        if(info[i].region.indexOf(data) != -1){
+            arr.push(info[i])
+        }
+    }
+    return arr;
+}
+function test(searchbox){
+    let arr = [];
+    for(let i = 0; i < info.length; i++){
+        if(info[i].cname.toLowerCase().indexOf(searchbox.toLowerCase()) != -1){
+            console.log("yes")
+            arr.push(info[i])
+            // console.log(searchArray)
+        }
+    }
+    return arr;
+}
+    console.log(countries);
+export const info = countries.map(item =>({
+    cname :item.name.common,
+    pop: item.population,
+    region: item.region,
+    capital: item.capital,
+    img : item.flags.png,
+    view : item.cca3
+}))
+console.log(info)
+
+// window.addEventListener('DOMContentLoaded', (event) => {
+    
+// });
 
 
 

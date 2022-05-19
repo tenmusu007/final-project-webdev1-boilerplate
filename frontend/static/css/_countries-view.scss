@@ -18,9 +18,11 @@ label {
 .top {
     display: flex;
     justify-content: left;
-    margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+.add{
+    margin-top: 3.8rem;
 }
 
 a.btn:link, a.btn:visited, a.btn {

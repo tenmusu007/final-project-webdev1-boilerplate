@@ -163,7 +163,7 @@ export default class extends AbstractView{
 
         return `
           <div class="top">
-              <a  class="btn back" href= "/countries"><i class="fas fa-long-arrow-alt-left"></i>  Back</a>
+              <a  class="btn back add" href= "/countries"><i class="fas fa-long-arrow-alt-left"></i>  Back</a>
           </div>  
           <div class="main">
                 <div class="myrow">

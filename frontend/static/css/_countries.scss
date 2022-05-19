@@ -23,9 +23,12 @@ a{
 }
 #container {
     width: 100%;
+    #region{
+        margin: 3rem 1rem;
+    }
     .search-box{
         position: absolute;
-        top: 7%;
+        top: 10%;
         left: 90%;
         transform: translate(-50%,-50%);
         transition: all 1s;
