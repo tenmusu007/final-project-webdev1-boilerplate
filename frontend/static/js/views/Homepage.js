@@ -18,13 +18,13 @@ export default class extends AbstractView{
     constructor(params) {
         super(params);
         this.setTitle("Homepage");
-    }
+    };
 
     async getHTML() {
         return `<!-- MAINBANNER -->
         <div class="container-fluid" id="mainBanner">
             <div class="row align-items-center">
-                <div class="col-xs-12 col-md-6">
+                <div class="col-xs-12 col-md-6 boxContent">
                     <h1>Countries<br><span>Informations</span></h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, nobis eius fugit dignissimos, accusamus deleniti quis corporis quam excepturi optio, explicabo quos est harum vitae ducimus aut perspiciatis assumenda. Odit?</p>
                     <button><a href="#">See Countries</a></button>
@@ -36,14 +36,14 @@ export default class extends AbstractView{
             <h2>Our Team</h2>
             <div class="row justify-content-center flags">            
                 <div class="col-12 col-md-3">
-                    <a href="http://localhost:3000/countries/bra">
+                    <a href="/countries/bra">
                         <img class="img-fluid" src="${getFlag("bra")}" alt="Brazil">
                     </a>
                     <span>From Brazil: <br>
                         Clelia | Vinicius</span>
                 </div>
                 <div class="col-12 col-md-3">
-                     <a href="http://localhost:3000/countries/bra">
+                     <a href="/countries/bra">
                       <img class="img-fluid" src="${getFlag("jpn")}" alt="">
                     </a>
                     <span>From Japan:<br> 
@@ -59,3 +59,4 @@ export default class extends AbstractView{
         ;
     }
 }
+
