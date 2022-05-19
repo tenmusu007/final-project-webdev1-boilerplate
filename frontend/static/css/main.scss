@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    background-color: white;
+}
+
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -15,7 +19,7 @@ textarea:focus, input:focus{
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none!important;
     transition: all 0.5s ease;
     color: white;
 }
@@ -31,3 +35,7 @@ a{
 @import "index";
 @import "countries";
 @import "countries-view"
+
+
+
+

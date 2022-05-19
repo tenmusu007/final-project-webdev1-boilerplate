@@ -6,6 +6,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: white;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -16,7 +20,7 @@ textarea:focus, input:focus {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   transition: all 0.5s ease;
   color: white;
 }
@@ -31,6 +35,259 @@ a {
 
 .back {
   margin-left: 3.8em;
+nav {
+  position: fixed;
+  height: 60px;
+  padding: 20px 50px 20px 50px;
+  background-color: transparent;
+}
+nav a {
+  color: #fbc67b;
+  text-transform: uppercase;
+  margin: 5px;
+  border-right: 10px solid transparent;
+  font-weight: bold;
+  padding-right: 5px;
+  cursor: pointer;
+}
+nav a:hover {
+  border-right: 10px solid #fbc67b;
+  color: white;
+}
+nav .btnDarkMod {
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  float: right;
+}
+
+#mainBanner {
+  background-image: url(..//img/banner.jpeg);
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  padding-left: 30px;
+}
+#mainBanner .row {
+  height: 100vh;
+}
+#mainBanner h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  #mainBanner h1 {
+    font-size: 80px;
+  }
+}
+#mainBanner h1 span {
+  color: black;
+  background-color: white;
+}
+#mainBanner p {
+  width: 85%;
+}
+#mainBanner button {
+  background: none;
+  border: none;
+}
+#mainBanner button a {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#team {
+  padding-top: 50px;
+}
+#team h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#team .flags div {
+  padding: 30px;
+  font-style: italic;
+}
+#team .flags div img {
+  margin-bottom: 20px;
+  border: solid 1px #dbdbdb;
+}
+#team .bgColors {
+  height: 20px;
+}
+#team .bgColors .redBg {
+  background-color: #bc002d;
+}
+#team .bgColors .greemBg {
+  background-color: #009b3a;
+}/*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#container {
+  width: 100%;
+}
+#container .search-box {
+  position: absolute;
+  top: 7%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid lightcyan;
+  padding: 5px;
+}
+#container .search-box:hover {
+  width: 200px;
+  cursor: pointer;
+}
+#container .search-box .search-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 1px solid lightblue;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+#container .search-box:hover input {
+  display: block;
+}
+#container .search-box .fa {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+#container .search-box form:hover .fa {
+  background: #07051a;
+  color: red;
+}
+@media screen and (max-width: 1400px) {
+  #container .conatiner-country {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+    row-gap: 10px;
+    justify-content: center;
+    margin: 5% auto;
+  }
+  #container .conatiner-country .cont-indiv {
+    width: 20%;
+    box-shadow: 5px 5px lightgrey;
+    margin: 2rem 0;
+    border: 0.5px solid black;
+  }
+  #container .conatiner-country .cont-indiv a {
+    text-decoration: none;
+    color: inherit;
+  }
+  #container .conatiner-country .cont-indiv:hover {
+    transform: scale(1.2);
+  }
+  #container .conatiner-country .cont-indiv .flag {
+    outline: 1px solid black;
+    width: 100%;
+    height: 120px;
+  }
+  #container .conatiner-country .cont-indiv .flag {
+    outline: 1px solid black;
+    width: 100%;
+  }
+  #container .conatiner-country .cont-indiv .name {
+    padding: 0px 20px;
+    margin: 10% 0px 10% 0px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  #container .conatiner-country .cont-indiv .num-pop {
+    padding: 0px 20px;
+  }
+  #container .conatiner-country .cont-indiv .region {
+    padding: 0px 20px;
+  }
+  #container .conatiner-country .cont-indiv .capital {
+    padding: 0px 20px;
+    margin: 0 0 10% 0;
+  }
+  #container .conatiner-country .cont-indiv .bold {
+    font-weight: bold;
+  }
+}
+
+#container {
+  width: 100%;
+}
+@media screen and (max-width: 750px) {
+  #container .conatiner-country {
+    width: 95%;
+    padding: 7% 0;
+    margin: 5% auto;
+  }
+  #container .conatiner-country .cont-indiv {
+    width: 250px;
+    background-color: #f8f8f7;
+    margin: 5% 0;
+  }
+  #container .conatiner-country .cont-indiv a {
+    text-decoration: none;
+    color: inherit;
+  }
+  #container .conatiner-country .cont-indiv .flag {
+    outline: 1px solid black;
+    width: 100%;
+  }
+  #container .conatiner-country .cont-indiv .name {
+    padding: 0px 20px;
+    margin: 10% 0px 10% 0px;
+    font-weight: bold;
+  }
+  #container .conatiner-country .cont-indiv .num-pop {
+    padding: 0px 20px;
+  }
+  #container .conatiner-country .cont-indiv .region {
+    padding: 0px 20px;
+  }
+  #container .conatiner-country .cont-indiv .capital {
+    padding: 0px 20px;
+  }
+  #container .conatiner-country .cont-indiv .bold {
+    font-weight: bold;
+  }
 }
 
 label {
@@ -46,6 +303,7 @@ label {
   margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+
 }
 
 a.btn:link, a.btn:visited, a.btn {
@@ -57,6 +315,7 @@ a.btn:link, a.btn:visited, a.btn {
   font-size: 10pt;
   font-weight: bold;
   border: 1px solid rgb(153, 155, 153);
+
   border-radius: 4px;
   margin-right: 1em;
   margin-bottom: 0.5em;
@@ -65,6 +324,7 @@ a.btn:link, a.btn:visited, a.btn {
 a.btn:hover {
   background-color: #c7cdd1;
   border: 1px solid rgb(153, 155, 153);
+
 }
 
 .myrow {
@@ -133,3 +393,4 @@ a.btn:hover {
     margin-left: 1em;
   }
 }/*# sourceMappingURL=main.css.map */
+

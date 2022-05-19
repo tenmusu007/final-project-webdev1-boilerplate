@@ -1,5 +1,8 @@
 import AbstractView from "./AbstractView.js";
+import { countries } from "../index.js";
 
+import { info } from "../index.js";
+import { loop } from "../index.js"
 export default class extends AbstractView{
     constructor(params) {
         super(params);
@@ -8,25 +11,45 @@ export default class extends AbstractView{
 
     async getHTML() {
         console.log(this.params.id);
+        
+
         const div = document.createElement("div");
         const cont = document.getElementById("container")
         const box =document.createElement("div")
-        // cont.appendChild(box);
-        box.innerHTML =`<h1> atsu </h1>`
+        // const search = document.querySelector("#search")
+        // console.log(search)
+        console.log("box")
+        box.innerHTML =`${loop(info)}`
         div.innerHTML = `
         <p id ="ptag">This is content</p>
         `
         return `
         <div id= "container"> 
-            ${box.innerHTML}
+            <div class ="search-box">
+                <input class="search-bar" type ="text" id="search" placeholder="Search here ...">
+                <i class="fa fa-search"></i>
+            </div>
+        <select name="region" id="region">
+            <option value="Americas">Americas</option>
+            <option value="Africa">Africa</option>
+            <option value="Asia">Asia</option>
+            <option value="Antarctic">Antarctic</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+            <div class="conatiner-country">
+                    ${box.innerHTML}
+            </div>
         </div>
         `
+
     }
+    
 }
+
+
+// })
 // const cont = document.getElementById("container")
 // const box =document.createElement("div")
 // cont.appendChild(box);
 // box.innerHTML =`<h1> atsu </h1>`
-
-// const item = localStorage.getItem('countries')
-// console.log(item)
