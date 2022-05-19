@@ -29,6 +29,12 @@ a {
   transition: all 0.5s ease;
 }
 
+.titleCountry {
+  font-weight: bold;
+}
+
+.back {
+  margin-left: 3.8em;
 nav {
   position: fixed;
   height: 60px;
@@ -287,7 +293,6 @@ a {
 label {
   padding: 10px 10px 10px 10px;
   display: inline-block;
-  color: black;
   font-weight: bold;
   font-size: 12pt;
 }
@@ -298,40 +303,66 @@ label {
   margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 1px solid #999b99;
+
 }
 
-a.btn:link, a.btn:visited {
+a.btn:link, a.btn:visited, a.btn {
   padding: 2px 2px 2px 2px;
-  width: 30px;
+  text-align: center;
+  vertical-align: center;
+  width: 100px;
   text-decoration: none;
   font-size: 10pt;
   font-weight: bold;
-  color: black;
-  background-color: white;
-  border: 1px solid #999b99;
+  border: 1px solid rgb(153, 155, 153);
+
   border-radius: 4px;
-  box-sizing: border-box;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
 }
 
 a.btn:hover {
-  background-color: #65b0e2;
-  border: 1px solid #999b99;
+  background-color: #c7cdd1;
+  border: 1px solid rgb(153, 155, 153);
+
 }
 
 .myrow {
   display: flex;
+  align-items: flex-start;
   margin-bottom: 1em;
-  border: 1px solid #999b99;
   flex-direction: row;
 }
 
 .mycolumn {
   display: inline-block;
-  margin-left: 2em;
   flex-direction: column;
   justify-content: left;
-  border: 1px solid #999b99;
+}
+.mycolumn ul {
+  padding-left: 0;
+  margin-right: 2em;
+}
+.mycolumn ul li {
+  list-style: none;
+  list-style-position: outside;
+  line-height: 1em;
+}
+
+.tamFlag {
+  width: 50%;
+  text-align: center;
+}
+
+.imgFlag {
+  width: 80%;
+  text-align: center;
+  border: 1px solid lightgray;
+}
+
+.tamCountry {
+  width: 60%;
+  margin-right: 2em;
 }
 
 .main {
@@ -339,6 +370,27 @@ a.btn:hover {
   flex-direction: column;
   justify-content: center;
   border-radius: 1em;
+  margin-top: 3em;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  box-shadow: 5px 5px 5px 5px lightgray;
+  padding-top: 3em;
+  padding-left: 1em;
 }
-/*# sourceMappingURL=main.css.map */
+
+/* Use a media query to add a breakpoint at 600px: */
+@media screen and (max-width: 600px) {
+  .myrow {
+    flex-direction: column;
+  }
+
+  .tamFlag, .tamCountry {
+    width: 100%;
+  }
+
+  .back {
+    margin-left: 1em;
+  }
+}/*# sourceMappingURL=main.css.map */
 
