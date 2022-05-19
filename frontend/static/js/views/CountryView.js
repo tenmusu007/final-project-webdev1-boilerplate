@@ -12,6 +12,7 @@ const getName = function(country) {
   };
   //  console.log(getName("arg"));
 
+
 export default class extends AbstractView{
     constructor(params) {
         super(params);
@@ -96,7 +97,7 @@ export default class extends AbstractView{
             //console.log(borders);
             if(borders){
             for (let b = 0; b < borders.length; b++){
-                countryBorders += `<img class="btnImage"><a href= "http://localhost:3000/countries/${borders[b].toLowerCase()}">${getName(borders[b].toLowerCase())}</a></img>  `;
+                countryBorders += `<a class="btn" href= "http://localhost:3000/countries/${borders[b].toLowerCase()}" >${getName(borders[b].toLowerCase())}</a> `;
              }
               //console.log(countryName);
              //console.log(countryFlag);
@@ -106,41 +107,41 @@ export default class extends AbstractView{
             }
         }
         }
-
         return `
-            <div>
-                <div>
-                  <img><a href= http://localhost:3000/countries>Back</a></img>
+            <div class="main">
+                <div class="top">
+                    <a  class="btn" href= http://localhost:3000/countries > <i class="fa-solid fa-arrow-left-long"></i>Back</a>
                 </div>
-                <div class="container">
-                    <div class="column"><img src=${countryFlag}></img></div>
-                    <div class="column">
-                        <div class="row"><h2>${countryName}</h2><div>
-                        <div class="row">
-                            <div class="container">
-                                <div class="column">
-                                    <div class="row"><label>Native Name: </label>${countryNativeName}</div>
-                                    <div class="row"><label>Population: </label>${countryPopulation}</div>
-                                    <div class="row"><label>Region: </label>${countryRegion}</div>
-                                    <div class="row"><label>Sub Region: </label>${countrySubregion}</div>
-                                    <div class="row"><label>Capital: </label>${countryCapital}</div>
+                <div class="myrow">
+                    <div class="mycolumn"><img src=${countryFlag}></img></div>
+                    <div class="mycolumn">
+                        <div class="myrow"><h2>${countryName}</h2><div>
+                        <div class="myrow">
+                                <div class="mycolumn">
+                                    <label><b>Native Name: </b></label>${countryNativeName}<br>
+                                    <label><b>Population: </b></label>${countryPopulation}<br>
+                                    <label><b>Region: </b></label>${countryRegion}<br>
+                                    <label><b>Sub Region: </b></label>${countrySubregion}<br>
+                                    <label><b>Capital: </b></label>${countryCapital}<br>
                                 </div>
-                                <div class="column">
-                                    <div class="row"><label>Top Level Domain: </label>${countryDomain}</div>
-                                    <div class="row"><label>Currencies: </label>${countryCurrencies}</div>
-                                    <div class="row"><label>Languages: </label>${countryLanguages}</div>
-                                    <div class="row"><label>Routes: </label><a href=${map}>Google Maps</a></div>
+                                <div class="mycolumn">
+                                    <label><b>Top Level Domain: </b></label>${countryDomain}<br>
+                                    <label><b>Currencies: </b></label>${countryCurrencies}<br>
+                                    <label><b>Languages: </b></label>${countryLanguages}<br>
+                                    <label><b>Routes: </b></label><a href=${map}>Google Maps</a>
                                 </div>
                             </div>
                         </div> 
-                        <div class="row">
-                            <label>Border Countries: </label> ${countryBorders}
-                        </div>
-                        <div class="row">
-                         <!--    <iframe src="${map}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!-->
-                        </div>
                     </div>
-                </div>    
+                    <div class="myrow">
+                            <label><b>Border Countries:</b> </label> ${countryBorders}
+                    </div>
+                    <div class="myrow">
+                         <!--    <iframe src="${map}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!-->
+                    </div>
             </div>`;
-    }
+   
+   }
 }
+
+
