@@ -20,6 +20,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
             document.querySelector('nav').style.backgroundColor = 'transparent'
         }
     }
+
+    const darkmodeBtn = document.querySelector(".btnDarkMod");
+
+    darkmodeBtn.addEventListener("click", function(){
+        const background = document.querySelector("body")
+    
+        if (background.style.backgroundColor === "white"){
+            background.style.backgroundColor = "black"
+            background.style.color = "white"
+        }else{
+            background.style.backgroundColor = "white"
+            background.style.color = "black"
+        }
+    });
 });
+
+
 
 

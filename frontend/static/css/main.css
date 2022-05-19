@@ -6,6 +6,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: white;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -94,7 +98,6 @@ nav .btnDarkMod {
 }
 
 #team {
-  background-color: #d3d3d3;
   padding-top: 50px;
 }
 #team h2 {
@@ -107,7 +110,8 @@ nav .btnDarkMod {
   font-style: italic;
 }
 #team .flags div img {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border: solid 1px #dbdbdb;
 }
 #team .bgColors {
   height: 20px;

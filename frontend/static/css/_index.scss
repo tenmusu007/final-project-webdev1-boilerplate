@@ -70,7 +70,7 @@ nav{
 }
 
 #team{
-    background-color: #d3d3d3;
+    // background-color: #dbdbdb;
     padding-top: 50px;
     h2{
         text-align: center;
@@ -83,7 +83,8 @@ nav{
             padding: 30px;
             font-style: italic;
             img{
-                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border: solid 1px #dbdbdb;
             }
         }
     }
