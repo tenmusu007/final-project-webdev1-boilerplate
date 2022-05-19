@@ -18,10 +18,18 @@ window.addEventListener('DOMContentLoaded', (e) =>{
     region.addEventListener("change", (event) => {
     let selectedregion = (event.target.value)
     console.log(selectedregion)
+    const regionArray =regionFn(selectedregion);
+    countriesContainer.innerHTML = loop(regionArray)
 });
 })
 function regionFn(data){
-    // if(data ==  )
+    let arr = [];
+    for(let i = 0; i < info.length; i++){
+        if(info[i].region.indexOf(data) != -1){
+            arr.push(info[i])
+        }
+    }
+    return arr;
 }
 function test(searchbox){
     let arr = [];
