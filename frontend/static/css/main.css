@@ -44,6 +44,14 @@ nav a:hover {
   border-right: 10px solid #fbc67b;
   color: white;
 }
+nav .btnDarkMod {
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  float: right;
+}
 
 #mainBanner {
   background-image: url(..//img/banner.jpeg);
