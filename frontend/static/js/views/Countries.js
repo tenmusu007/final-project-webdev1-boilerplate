@@ -25,7 +25,10 @@ export default class extends AbstractView{
         `
         return `
         <div id= "container"> 
-        <input class="sarch-bar" type ="text" id="search">
+            <div class ="search-box">
+                <input class="search-bar" type ="text" id="search" placeholder="Search here ...">
+                <i class="fa fa-search"></i>
+            </div>
         <select name="region" id="region">
             <option value="Americas">Americas</option>
             <option value="Africa">Africa</option>

@@ -34,7 +34,6 @@ function regionFn(data){
 function test(searchbox){
     let arr = [];
     for(let i = 0; i < info.length; i++){
-        // console.log("loop")
         if(info[i].cname.toLowerCase().indexOf(searchbox.toLowerCase()) != -1){
             console.log("yes")
             arr.push(info[i])
