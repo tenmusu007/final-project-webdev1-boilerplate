@@ -103,7 +103,7 @@ a {
     margin: 5% auto;
   }
   #container .conatiner-country .cont-indiv {
-    width: 56%;
+    width: 250px;
     background-color: #f8f8f7;
     margin: 5% 0;
   }
@@ -132,15 +132,6 @@ a {
   #container .conatiner-country .cont-indiv .bold {
     font-weight: bold;
   }
-}
-
-body {
-  display: flex;
-}
-
-h2 {
-  font-size: 14pt;
-  font-weight: bold;
 }
 
 label {
