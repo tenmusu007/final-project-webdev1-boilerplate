@@ -43,7 +43,7 @@ export default class extends AbstractView{
                         Clelia | Vinicius</span>
                 </div>
                 <div class="col-12 col-md-3">
-                     <a href="/countries/bra">
+                     <a href="/countries/jpn">
                       <img class="img-fluid" src="${getFlag("jpn")}" alt="">
                     </a>
                     <span>From Japan:<br> 
