@@ -4,6 +4,9 @@ export const countries = getCountries();
 let searchbox 
 let url ="http://localhost:3000/countries"
 window.addEventListener('DOMContentLoaded', (e) =>{
+    document.body.addEventListener("click", (e) => {
+        console.log(e.target);
+    })
     if(location.href === url){
         const search = document.getElementById("search")
         const countriesContainer = document.getElementsByClassName("conatiner-country")[0];
@@ -43,9 +46,15 @@ window.addEventListener('DOMContentLoaded', (e) =>{
         }
     }
 
-    const darkmodeBtn = document.querySelector(".btnDarkMod");
+    
+    }
+    console.log("home")
+})
+
+const darkmodeBtn = document.querySelector(".btnDarkMod");
 
     darkmodeBtn.addEventListener("click", function(){
+        console.log("clicked")
         const background = document.querySelector("body")
     
         if (background.style.backgroundColor === "white"){
@@ -56,9 +65,7 @@ window.addEventListener('DOMContentLoaded', (e) =>{
             background.style.color = "black"
         }
     });
-    }
-    console.log("home")
-})
+
 function regionFn(data){
     let arr = [];
     for(let i = 0; i < info.length; i++){
