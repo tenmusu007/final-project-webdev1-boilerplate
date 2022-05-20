@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', (e) =>{
             if(e.key === "Enter"){
                 searchbox = e.target.value
                 const searchArray = test(searchbox);
-                console.log(searchArray)
+                // console.log(searchArray)
                 countriesContainer.innerHTML = loop(searchArray);
             };
         })
@@ -107,7 +107,7 @@ export const loop = (data)=>{
             <div class="box">
             <img src="${data[i].img}" alt="" class="flag">
             <p class="name">${data[i].cname}</p>
-            <p class="num-pop"><span class="bold">population:</span> ${data[i].pop}</p>
+            <p class="num-pop"><span class="bold">population:</span> ${data[i].pop.toLocaleString()}</p>
             <p class="region"><span class="bold">region:</span> ${data[i].region}</p>
             <p class="capital"><span class="bold">capital:</span> ${data[i].capital}</p>
             </div>

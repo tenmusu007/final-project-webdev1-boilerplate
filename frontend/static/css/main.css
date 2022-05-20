@@ -305,7 +305,7 @@ a {
   background: #07051a;
   color: red;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
   #container .conatiner-country {
     width: 95%;
     display: flex;

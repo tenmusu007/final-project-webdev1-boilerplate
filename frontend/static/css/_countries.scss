@@ -5,7 +5,7 @@
 }
 
 $sp: 750px;
-$pc: 1400px;
+$pc: 1600px;
 @mixin sp {
     @media screen and (max-width: ($sp)) {
         @content;
