@@ -27,7 +27,7 @@ export default class extends AbstractView{
                 <div class="col-xs-12 col-md-6 boxContent">
                     <h1>Countries<br><span>Informations</span></h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, nobis eius fugit dignissimos, accusamus deleniti quis corporis quam excepturi optio, explicabo quos est harum vitae ducimus aut perspiciatis assumenda. Odit?</p>
-                    <button><a href="#">See Countries</a></button>
+                  
                 </div>
             </div>
         </div>
